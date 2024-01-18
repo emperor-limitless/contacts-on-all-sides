@@ -1,0 +1,201 @@
+syntax = "proto2";
+
+package network.packets;
+
+message Connected {
+    repeated Player players = 1;
+    optional bool dev = 2;
+    optional bool admin = 3;
+}
+
+message Player {
+    required int64 x = 1;
+    required int64 y = 2;
+    required int32 direction = 3;
+    required string map = 4;
+    required string name = 5;
+}
+
+message ParseMap {
+    required string data = 1;
+}
+
+message Created {
+}
+
+message Error {
+    required string reason = 1;
+}
+
+message Buffer {
+    required string text = 1;
+    required string name = 2;
+    required string sound = 3;
+}
+
+message Play {
+    required string map = 1;
+    required string sound = 2;
+    required string who = 3;
+    optional int64 x = 4;
+    optional int64 y = 5;
+    optional int64 z = 6;
+    optional int64 direction = 7;
+    optional bool self_play = 8;
+}
+
+message Move {
+    required string who = 1;
+    required string map = 2;
+    optional int64 x = 3;
+    optional int64 y = 4;
+    optional bool silent = 5;
+    optional int64 direction = 6;
+}
+
+message Gravity {
+    oneof gravity_state {
+        bool falling = 1;
+        bool landing = 2;
+        bool jumping = 3;
+        bool on_ground = 4;
+    }
+}
+
+message Pong {
+}
+
+message Chat {
+    required string message = 1;
+}
+
+message Online {
+    required string who = 1;
+    required int64 x = 2;
+    required int64 y = 3;
+    required int32 direction = 4;
+    required string map = 5;
+}
+
+message Offline {
+    required string who = 1;
+}
+
+message Login {
+    required string user = 1;
+    required string password = 2;
+    required string version = 3;
+    required string id = 4;
+    optional bool dev = 5;
+}
+
+message Create {
+    required string user = 1;
+    required string password = 2;
+    required string email = 3;
+    required string id = 4;
+}
+
+message Who {
+}
+
+message Ping {
+}
+
+message Say {
+    required string text = 1;
+}
+
+message MoveClient {
+    required string who = 1;
+    required string map = 2;
+    optional uint64 x = 3;
+    optional uint64 y = 4;
+    optional uint32 direction = 5;
+}
+
+message Close {
+}
+
+message Connect {
+}
+
+message WeaponData {
+    required int64 fire_time = 1;
+    required int64 reload_time = 2;
+    required bool automatic = 3;
+}
+
+message Health {
+}
+
+message Draw {
+    required string weapon = 1;
+}
+
+message Reload {
+}
+
+message Fire {
+}
+
+message Ammo {
+}
+
+message FireStop {
+}
+
+message Teleport {
+    required int64 x = 1;
+    required int64 y = 2;
+    required string map = 3;
+}
+
+message Cycle {
+    required uint32 direction = 1;
+}
+
+message UseItem {
+}
+
+message ServerStats {
+}
+
+message ServerNote {
+}
+
+message Packet {
+    oneof data {
+        Connect connect = 1;
+        Connected connected = 2;
+        Login login = 3;
+        Create create = 4;
+        Created created = 5;
+        Chat chat = 6;
+        Buffer buffer = 7;
+        Close close = 8;
+        Error error = 9;
+        Ping ping = 10;
+        Pong pong = 11;
+        Who who = 12;
+        Offline offline = 13;
+        Online online = 14;
+        Play play = 15;
+        Move move = 16;
+        ParseMap parse_map = 17;
+        MoveClient move_client = 18;
+        Say say = 19;
+        WeaponData weapon_data = 20;
+        Draw draw = 21;
+        Fire fire = 22;
+        Reload reload = 23;
+        Health health = 24;
+        Ammo ammo = 25;
+        FireStop fire_stop = 26;
+        Teleport teleport = 27;
+        Cycle cycle = 28;
+        UseItem use_item = 29;
+        ServerStats server_stats = 30;
+        ServerNote server_note = 31;
+    }
+}

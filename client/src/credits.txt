@@ -1,0 +1,30 @@
+Credits goes to the following people.
+Music.
+Aaron Krogh: Some music edited: https://soundcloud.com/aaron-anderson-11
+some music used are by teknoAXE's under the Creative Commons — Attribution 4.0 International license: https://creativecommons.org/licenses/by/4.0/
+some music are used from kevin MacLeod(Incompetech.com)
+Music used from teknoAXE's:
+Shadow Nights: mod1: Edited (https://www.youtube.com/watch?v=Lh_XdjBRwzc)
+music used by Kevin MacLeod:
+Disco Medusae by Kevin MacLeod: Edited.
+Link: https://incompetech.filmmusic.io/song/3652-disco-medusae
+License: https://filmmusic.io/standard-license
+
+sound effects:
+GameAudio: https://freesound.org/people/GameAudio/
+
+Game/Development libraries.
+synthizer: Unlicense: https://crates.io/crates/synthizer
+transfer-progress: MITOrApache-2.0: https://crates.io/crates/transfer-progress
+reqwest: MITOrApache-2.0: https://crates.io/crates/reqwest
+semver: MITOrApache-2.0: https://crates.io/crates/semver
+crossclip: MITOrApache-2.0: https://crates.io/crates/crossclip
+anyhow: MITOrApache-2.0: https://crates.io/crates/anyhow
+fernet: MPL-2.0: https://crates.io/crates/fernet
+serde_json: MITOrApache-2.0: https://crates.io/crates/serde_json
+serde: MITOrApache-2.0: https://crates.io/crates/serde
+tts: MIT: https://crates.io/crates/tts
+rand: MITOrApache-2.0: https://crates.io/crates/rand
+msgbox: MIT: https://crates.io/crates/msgbox
+backtrace: MITOrApache-2.0: https://crates.io/crates/backtrace
+once_cell: MITOrApache-2.0: https://crates.io/crates/once_cell
